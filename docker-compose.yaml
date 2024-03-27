@@ -5,6 +5,7 @@ services:
   postgres:
     image: postgres:15.1 
     env_file: .env
-    restart: unles-stopped
+    restart: unless-stopped
     ports:
       - "5432:5432"
+    
