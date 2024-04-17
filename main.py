@@ -1,14 +1,17 @@
 """Модуль входа в программу."""
 
-from database import Database
-from settings import settings
+import argparse
+
+from view import View
 
 
 def main() -> None:
     """Главная функция."""
-    db = Database(settings=settings)
-    with db() as conn:
-        conn.cursor()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("orders", type=str, help="1,2,3")
+    orders = parser.parse_args().orders
+    v = View(orders.split(","))
+    print(v)
 
 
 if __name__ == "__main__":

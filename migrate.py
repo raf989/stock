@@ -30,7 +30,7 @@ article INTEGER UNIQUE NOT NULL
 rack_table_create = """
 CREATE TABLE IF NOT EXISTS rack (
 id SERIAL PRIMARY KEY,
-name VARCHAR(5) NOT NULL
+name VARCHAR(5) UNIQUE NOT NULL
 )
 """
 order_table_create = """

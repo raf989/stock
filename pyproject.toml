@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "stock"
+name = "sql-shop"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fastapi = "^0.110.0"
 psycopg2-binary = "^2.9.9"
 envparse = "^0.2.0"
 

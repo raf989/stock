@@ -4,7 +4,7 @@ from pathlib import Path
 
 from envparse import env
 
-from database import DatabaseSettings
+from database import Database, DatabaseSettings
 
 BASE_DIR = Path(__file__).resolve().parent
 ENV_PATH = BASE_DIR / ".env"
@@ -19,3 +19,5 @@ settings = DatabaseSettings(
     user=env.str("POSTGRES_USER"),
     password=env.str("POSTGRES_PASSWORD"),
 )
+
+db = Database(settings=settings)

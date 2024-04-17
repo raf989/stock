@@ -1,18 +1,18 @@
-"""Модуль для удаление данных и таблиц в бд."""
+"""Модуль для удаления данных и таблиц из бд."""
 
 from migrate import execute_command
 
 TABLES = (
     "product",
-    "rack",
     "ordert",
+    "rack",
     "rack_product_link",
     "order_product_link",
 )
 
 
 def drop() -> None:
-    """основная функция модуля."""
+    """Основная функция модуля."""
     for table in TABLES:
         sql_command = f"DROP TABLE IF EXISTS {table} CASCADE"
         execute_command(sql_command)
